@@ -1,6 +1,7 @@
 from mcEnv import machine_learner
 from cspEnv import cspEnv
 from ortaggi import Ortaggi
+from pathlib import Path
 
 
 _SEED = 16
@@ -14,7 +15,8 @@ _TEST_CASE = [[39,9,15,25.35467646,91.81183218,7.992041984,116.7555937]]
 #effettua un controllo sull'accuratezza del machine learner
 #_TEST_CASE = None
 
-_DATABASE = 'Crop_recommendation.csv'
+p=Path(__file__)
+_DATABASE = p.parent.absolute() / 'Crop_recommendation.csv'
 
 _FARMIMG_SPACE = 10000 #metri quadrati
 _FARM_CAPACITY = 200000 #chili
